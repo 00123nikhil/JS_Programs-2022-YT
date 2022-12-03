@@ -1,0 +1,5 @@
+-ids of elements are supposed to be unique, this is a faster way to select an element. The getElementById method is only available in the document object because, since id values must be unique, there is no need for a separate function. */
+
+/* Why we are using innerHTML?----------------------
+
+The DOM innerHTML property is used to set or return the HTML content of an element. Syntax: It returns the innerHTML Property. It is used to set the innerHTML property.

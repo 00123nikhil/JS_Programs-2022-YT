@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript_2022</title>
+  </head>
+
+  <body style="background-color: black; color: whitesmoke">
+    <h3>Javascript_2022</h3>
+
+    <h1>---------- Javascript ---------</h1>
+
+    <!--This is javascript : using script tag in index.html page-->
+    <!-- <script src="object.js"></script> -->
+    <!-- =================================================================================================== -->
+    <!-- /*JavaScript Tutorial in Hindi for Beginners [Part 39] - How to select an element by id in JavaScript*/ -->
+    <!-- <ul>
+      <li id="first">list1</li>
+      <li class="elmclass">list2</li>
+      <li class="elmclass">list3</li>
+    </ul> -->
+
+    <!-- =======================================================================================================-->
+
+    <!-- //JavaScript Tutorial in Hindi for Beginners [Part 40] - How to select element by class in JavaScript -->
+
+    <!-- ====================================================================================================== -->
+
+    <!-- JavaScript Tutorial in Hindi for Beginners [Part 43] - Traversing elements in JavaScript -->
+    <ul id="intro">
+      <!-- <ul> parent element  -->
+      <li>list 1</li>
+      <li id="sib">list 2</li>
+      <li>list 3</li>
+      <li>list 4</li>
+    </ul>
+    <!-- ================================================================================================== -->
+
+    <!-- change html using javascript using innerHTML part 44  ------------------------------------->
+    <div id="44">
+      <p>this is part 44</p>
+    </div>
+    <!-- ===================================================================================================== -->
+    <!-------------------------- create and append element------------------------------------- -->
+    <div id="45">
+      <p>Part 45-create and append</p>
+    </div>
+
+    <ul id="adding">
+      <li>append1</li>
+      <li>append2</li>
+      <li>append3</li>
+    </ul>
+
+    <script>
+      /*----------------------------------- part 39 -----------------------------------------*/
+      //let elm = document.getElementById("first"); //id is selected
+      //console.log(elm.innerHTML);
+      //elm.innerHTML = "<p>added</p>";//you can add your own using innerHtml
+
+      /*-------------------------------- part 40 ------------------------------------------*/
+      //you can select multiple element using getElementByClassName
+      // let elm = document.getElementsByClassName("elmclass");
+
+      // for (let i = 0; i < elm.length; i++) {
+      //   elm[i].innerHTML = "<p>innerclass</p>";
+      // }
+
+      /*--------------------------------------- part 43 -------------------------------------*/
+      let elm = document.getElementById("intro");
+      let sibling = document.getElementById("sib");
+      // let prt = elm.parentElement; //select parent element by parentElement
+      // prt.innerHTML = "you can change by like this using innerHtml ...";
+      // console.log(prt);
+
+      // let firstelm = elm.firstElementChild; //selecting first element
+      // let lastelm = elm.lastElementChild; //selecting last element
+      // let selectchild = elm.children; //selecting all element of parent element
+      let selectpreviouselmsibling = sibling.previousElementSibling; //selected previous element
+      let selectnextsibling = sibling.nextElementSibling; //selected next sibling
+      // console.log(firstelm);
+      console.log("selected previous child", selectpreviouselmsibling);
+      console.log("selected next sibling", selectnextsibling);
+
+      /*------------------------------------------- part 44 -------------------------------------------*/
+      //change html with javascript using innerHTML
+      let elm44 = document.getElementById("44");
+      elm44.innerHTML = "<h3>change in html here</h3>";
+
+      /*------------------------------------------------ part 45 ------------------------------ ------------*/
+      //create and append element
+      let part45 = document.getElementById("45");
+      let create_h1 = document.createElement("h1");
+      let textadd_in_h1 = document.createTextNode("this is h1 tag text"); //createTextNode use for add text to element using method createTextNode
+      //now using property
+      create_h1.textContent = "to add text use property";
+
+      //you can add classes and id's
+      create_h1.className = "Add_class";
+      create_h1.id = "Add_id";
+      create_h1.appendChild(textadd_in_h1);
+      part45.appendChild(create_h1);
+
+      //let understand through example
+      let add_MyList = document.getElementById("adding");
+      let adding_item = document.createElement("li");
+      adding_item.textContent = "New List appended";
+      add_MyList.appendChild(adding_item);
+    </script>
+  </body>
+</html>
