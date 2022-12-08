@@ -10,9 +10,16 @@
 
 <body>
   <!-- convet kms into miles using function  [005]-->
-  <input type="number" id="data">kms
+  <!-- <input type="number" id="data">kms
   <button onclick="convert()">convert</button>miles
-  <h2 id="res"></h2>
+  <h2 id="res"></h2> -->
+
+  <!-- ============================= [006] =================================== -->
+  <!-- convert celcis into fasherhit  -->
+  <input type="text" id="data"> C
+  <br>
+  <button onclick="convert()">Convert</button>
+  <h1 id="res"></h1>
 
   <script>
     /*find square root of number */
@@ -20,15 +27,19 @@
     let b = Math.sqrt(a);
     // document.write(b);
     console.log(b) */
+    // ======================================================================
 
     //area of triangle
+
     /* let base = prompt('enter your base', '');
     let height = prompt('enter Height', '');
     let area = base * height / 2;
 
     console.log("area of triangle is ", area) */
+    // ========================================================================
 
     //swipe the number using- temp or without temp
+
     /*     let a = prompt('enter value of a', '');
         let b = prompt('enter value of b', '');
         console.log(`the value of a is ${a} and the value of b is ${b}`);
@@ -39,9 +50,10 @@
         a = b;//b=9
         b = temp;
         console.log(`After swapping the value \n the value of a is ${a} and the value of b is ${b}`); */
-
+    // ===========================================================================
 
     //without temp
+
     /* let a = parseInt(prompt('enter value of a', ''));
     let b = parseInt(prompt('enter value of b', ''));
     console.log(`the value of a is ${a} and the value of b is ${b}`);
@@ -51,13 +63,25 @@
 
     console.log(`After swapping the value \n the value of a is ${a} and the value of b is ${b}`); */
 
+    // ================================================================================
+
     //[005]
+
+    /*  function convert() {
+       let kms = document.getElementById("data").value;
+       const factor = 0.621371;
+       var miles = kms * factor;
+       document.getElementById('res').innerText = `${miles}miles`;
+       //document.getElementById('res').innerText =miles + ' miles';
+     } */
+
+    // =================================================================================
+    //[006]
+
     function convert() {
-      let kms = document.getElementById("data").value;
-      const factor = 0.621371;
-      var miles = kms * factor;
-      document.getElementById('res').innerText = `${miles}miles`;
-      //document.getElementById('res').innerText =miles + ' miles';
+      var c = document.getElementById('data').value;
+      var f = (c * 1.8) / 32;
+      document.getElementById('res').innerText = `${c} C ==> ${f} F`;
     }
 
 
