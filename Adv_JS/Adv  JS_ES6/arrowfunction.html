@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+    <script>
+        function double(a) {
+            return 2 * a;
+        }
+
+        //arrow function
+        let double1 = (a) => 2 * a;
+        //let double1 = a => 2 * a; if you have only one parameter
+        /* 1.make function name as variable using let 
+        2. remove return because automatically return called */
+
+        console.log(double1(2));
+
+        //anonymous arrow function
+        document.addEventListener('click', () => {
+            console.log('clicked ..')
+        })
+
+        // ============================================================
+        //javascript callback function------- please refer callback function video part 94 tech gun
+
+        //anonymous function directly on function
+        function addi(m, n) {
+            console.log(m + n);
+        }
+
+        addi(1, 2, function () {
+            console.log('anonymous function called in function call');
+        })
+    </script>
+</body>
+
+</html>

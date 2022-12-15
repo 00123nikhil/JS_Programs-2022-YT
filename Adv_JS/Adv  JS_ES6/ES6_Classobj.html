@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Class and object</title>
+</head>
+
+<body>
+    <script>
+        //class and objects in es6 js
+        class person {
+            //here constructor function automatically created when object created.
+            constructor(a, b) {
+                this.name = a;
+                this.age = b;
+            }
+            //method -- this method is directly attached to prototype
+            //we can called this method is normal method 
+            sayHi() {
+                console.log('hi....');
+            }
+
+            //static property --also need to called by class name
+            static sproperty = 'this is static property';
+            //static method -- this method not called by object we use class name
+            static hello() {
+                console.log('hey nik.. hello');
+            }
+        }
+
+        //object created then constrcutor also created automatically
+        let person1 = new person('Chandler', 30);
+
+        //to called the static method we use class name instead of object 
+        person.hello();
+        person.sproperty;//static property calling 
+
+        //------------------------------------------------------------------------------------------------
+
+        /* Inheritance in js */
+        class emp {
+            //parent class
+            constructor(n) {
+                this.name = n;
+            }
+            //method 
+            msg() {
+                console.log('hello this is parent class method');
+            }
+        }
+
+        class manager extends emp {
+            //child class
+            constructor(n, d) {
+                super(n);
+                this.department = d
+            }
+
+            //method like parent class method but name is same
+            msg() {
+                console.log('this is child class method');
+            }
+            //method
+            info() {
+                //if you want to call method of another class or parent class you need to 
+                super.msg();
+                //you can called child class method that same name of parent class by 
+                this.msg();
+                console.log(this.name + ' is a manager of department ' + this.department);
+            }
+        }
+
+        let manager1 = new manager("Nikhil Borse", 'london');
+        console.log(manager1);
+        //to call method of class
+        console.log(manager1.info());
+
+
+        //class 
+        class admin extends manager {
+
+        }
+        let admin1 = new admin();
+        // console.log('admin class')
+
+        // ==============================================================================================
+        console.log('-------------- -----------------')
+
+        /* Public and private property in js */
+        //adding private 
+        class private1 {
+            //to declared in outside of constructor
+            #name = '';
+            constructor(n) {
+                this.#name = n;
+            }
+
+            getname() {
+                console.log(this.#name);
+                //you can access this private proprety in the class
+            }
+        }
+
+        let property = new private1('Nikhil');
+        // console.log(property.#name); //you cannot access private property like this, showing error
+        console.log(property.getname());//but you can access by this way.
+
+
+        // ================================================================================================
+        //mixin
+
+        //creating object
+        let usefulmethod={
+            English(){
+                console.log('English');
+            }
+            ,
+            French(){
+                console.log('French');
+            }
+        }
+
+        class user{
+            constructor(){
+                this.name='Nikhil';
+            }
+        }
+
+        //
+        Object.assign(user.prototype,usefulmethod);
+        
+        let user1=new user();
+        console.log(user1.English());
+        
+    </script>
+</body>
+
+</html>

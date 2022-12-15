@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adv JS</title>
+</head>
+
+<body>
+
+    <script>
+        let arr1 = [1, 2, 3, 4];
+        let arr2 = [6, 7, 8, 0, ...arr1]//spread Operator 
+        let arr3 = [...arr1, arr2];
+        console.log(arr3)
+        console.log(arr2);
+
+        //------------------------- template literal in Adv JS-------------------------------
+        let str = `hey            nikhil this literal can show as it is you wr  rite in 
+        
+        the code 
+        editor           okk`
+        console.log(str);
+
+        //---------------------------- Array Destructuring -----------------------------------
+        let book = ['Deep Work', 230, 345];
+        // let name=book[0];
+        // let price=book[1];
+        // let day=book[2];
+
+        let [name, price, day] = book;//this is called array destructuring
+        console.log(price);//230;
+        console.log('name');//deep work
+
+        //you can assign default value or nested array too
+        let book1 = ['rich dad poor dad', 123, 48, ['publication', 2023]];
+
+        //nested array destructring 
+        let [name1, price1, days, [bookpub, year]] = book1;
+        console.log(year);//2023
+
+        //-----------------------------------------------------------------------------------------
+        function book() {
+            return ['do hard things', 220];
+        }
+        //destructing array
+        let [book_title, pric] = book;
+        console.log(price);//220
+
+    </script>
+</body>
+
+</html>

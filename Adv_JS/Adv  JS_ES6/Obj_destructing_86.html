@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //objects in js
+        let books = {
+            name: 'do epic shits',
+            price: '230',
+            year: 2022
+        }
+        //call the objects
+        // let x = books.name;
+        // console.log(x);
+
+        /* 1.1 ---now object destructing in js
+        1.1 ---use {} bracket for object destructing 
+        1.1 ---you can change the name to another by name:title
+        1.1 ---you cannot change the value directly 
+        1.1 ---you can set default value by price=200 like this */
+        // let {name:title,price,year}=books;
+
+        let { name, price, year } = books;
+        console.log(price);
+
+        //nested object destructring in js
+        let booke = {
+            name: 'where is my cheese',
+            year: 2021,
+            publication: { p1: 'public', p2: 20043 }
+        }
+        let { name1, year2, publication: { p1 :/* you can assign another name  */pub, p2 } } = booke
+        console.log(name1);
+    </script>
+</body>
+
+</html>

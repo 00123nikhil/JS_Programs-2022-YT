@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS in js</title>
+</head>
+
+<body>
+    <script>
+        //we can create object and access by using dot notation
+        book = {
+            b1: 'deep work',
+            b2: 'do epic shit'
+        }
+
+        //dot notation 
+        console.log(book.b1);
+
+        /* you can assign your new property also */
+        book.b3 = 'rich dad poor dad';
+        console.log(book.b3);
+
+        //----------------------------------------------------------------------------------------------
+        /* create another empty object and assign new property or function */
+        // let person=new Object();//you can create object like this
+        let person = {};
+        person.name = 'Nikhil';
+        person.sayHi = function () {
+            console.log('hey this is object in function');
+        }
+
+        person.sayHi();
+
+        // ================================================================================================
+        /* constructor function - every time use first letter as capital when creating
+        1. pass all property name as parameter */
+        function Person1(first, last, age) {
+            this.firstname = first;
+            this.lastname = last;
+            this.a = age;
+            //this is called constructor function in es5 js but in es6 we called it class
+
+            function sayhi() {
+                console.log('hey this is function but we called it as method');
+                //this is object inside function we called it as method
+            }
+        }
+
+        //now called object 
+        let person_obj = new Person1('Nikhil', 'Borse', 24);
+        //you can create multiple object 
+        let person_obj1 = new Person1('Suraj', 'Chaudhary', 26);
+
+        console.log(person_obj);
+
+
+        //-------------------Prototype in js --------------------------------
+        /* refer video-------------
+        Advanced JavaScript Tutorial in Hindi[Part 91]- Prototype and Prototypal Inheritance in JavaScript
+        for prototype */
+    </script>
+</body>
+
+</html>
