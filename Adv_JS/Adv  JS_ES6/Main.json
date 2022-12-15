@@ -1,0 +1,12 @@
+{
+  "name": "Nikhil",
+  "age": 25,
+  "is_student": true,
+  "password": null,
+  "p_lang": ["c", "GCP", "AWS", "JS", "React", "ajax"],
+  "address": {
+    "city": "Pune",
+    "pincode": 3432334,
+    "state": "maharashtra"
+  }
+}

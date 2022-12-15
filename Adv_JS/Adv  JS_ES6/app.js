@@ -28,4 +28,24 @@ import { default as fal } from "./Modules/100linefunction.js";
 
 fal(); //default function is called
 
+//json -------------------------------------------------------------
 
+//creating and accessing json file
+let data = `"name": "Nikhil",
+"age": 25,
+"is_student": true,
+"password": null,
+"p_lang": ["c", "GCP", "AWS", "JS", "React", "ajax"],
+"address": {
+  "city": "Pune",
+  "pincode": 3432334,
+  "state": "maharashtra"
+}`;
+
+let dObject = JSON.parse(data); //converted string into js object
+//accessing object
+console.log(dObject["name"]); // o/p-- Nikhil
+//to access array value
+console.log(dObject["p_lang"][1]); // GCP
+//to access object value
+console.log(dObject["address"]["city"]); //pune
